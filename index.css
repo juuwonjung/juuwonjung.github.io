@@ -1,0 +1,511 @@
+* {
+    font-family: "Inter";
+    transition: 0.2s;
+    box-sizing: border-box;
+  }
+  
+  html{
+    font-size: 32px;
+    
+  
+  }
+  
+  body, html {
+    
+    color: #0A0A0A;
+    line-height: 0.7rem;
+    overflow-x: hidden !important;
+    
+  
+  }
+  
+  
+  a {
+      text-decoration: none;
+      color:#0A0A0A;
+      display: inline-block;
+  }
+  
+  body{
+    margin:0;
+    padding: 0 0.6rem;  
+  }
+  
+  img, video {
+    display:block;
+    opacity: 1;
+    border-radius: 10px;
+    
+  }
+  /* Standard font size */
+  
+  h5{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  h7{
+    font-size: 16px;
+    font-weight:400;
+  }
+  p{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  /* Navigation bar */
+  .nav-bar {
+     
+      position: fixed; /* Set the navbar to fixed position */
+      top: 0; /* Position the navbar at the top of the page */
+      padding-top: 0.8rem;
+      width: calc(100% - 1.2rem); /* subtract added removed space from body padding page */
+      padding: 0 0.5rem;
+    
+    }
+    
+    /* Links inside the navbar */
+    .nav-bar-links ul{
+      float: right;
+      list-style: none; 
+  
+    }
+  
+    .nav-bar-links ul li{
+      display: inline-block;
+      padding-left: 1rem;
+    }
+  
+    .nav-bar-links a.split{
+      float:left;
+      padding: 1rem 0px;
+    }
+    
+    /* Change background on mouse-over */
+    .nav-bar a:hover {
+      color: #075BFF;
+    }
+  
+    .nav-bar a:active{
+      color:#075BFF;
+    }
+    .nav-bar svg{
+      fill:black;
+    }
+  
+    .nav-bar svg:hover{
+      fill:#075BFF !important;
+    }
+    .nav-bar svg:active{
+      fill:#075BFF !important;
+    }
+  
+  /* FOOTER */
+  
+  footer{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /*HOME PAGE*/
+   
+  /*Main landing page gif grid*/
+  
+  .landing-page-wrapper{
+    display:grid;
+    grid-template-columns: 25% 50% 25%;
+    text-align: center;
+    position:absolute;
+    top:50%;
+    transform: translate(0,-50%);
+    width: calc(100% - 1.2rem);
+  }
+  
+  .home-container{
+    height: 85vh
+  }
+  div.main-grid{
+    text-align: center;
+  }
+  
+  .main-nested-top{
+    text-align: center;
+    padding-bottom:1rem;
+    display: block;
+    width: 100%;
+    
+  }
+  
+  .main-nested-bottom{
+    text-align: center;
+    width:100%;
+    display: block;
+  
+    
+  }
+  
+  /* me embroidery on hover close eyes - overlay image*/
+  
+  
+  .main-me-wrapper{ 
+    margin: auto;
+   
+    
+  }
+  
+  .me-blink{
+    z-index: 100;
+    opacity: 1;
+    position: relative;
+    
+  
+  }
+  
+  .main-me-wrapper img, video{
+  
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  
+  .hover-image-blink {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    opacity: 1;
+    z-index: 2;
+    top: 0;
+    width: 50%;
+  }
+  
+  .image-blink-default{
+      position: absolute;
+      text-align: center;
+      margin: auto;
+      opacity: 1;
+      top: 0;
+      width: 50%;
+      z-index: 3;
+  
+    
+  }
+  
+  .image-blink-default:hover{
+    opacity: 0;
+  
+  }
+  
+  
+  /* text image overlay to paper */
+  
+  .paper-img{
+    width: 100%;
+    height: auto;
+    display: block;
+    
+  }
+  
+  .main-textbox-frame{
+    position: relative;
+    width: 100%;
+    margin:auto;
+    max-width: 400px;
+    
+    
+  }
+  
+  /* text scroll */
+  
+  
+  .main-text-img{
+    overflow: hidden;
+    height: 65px;
+    position: absolute;
+    top:10%;
+  }
+  
+  .main-text-img div div{
+    display: inline-block;
+    padding: 4px 12px;
+    
+    margin-bottom: 20px;
+  
+  }
+  
+  .main-text-img div:nth-child(1){
+    animation: scroll 10s linear infinite;
+  }
+  
+  @keyframes scroll{
+    0%{margin-top: -10px}
+    23%{margin-top: -10px}
+    35%{margin-top: -50px}
+    60%{margin-top: -50px}
+    70%{margin-top: -70px}
+    93%{margin-top: -70px}
+    100%{margin-top: -81.5px}
+  
+  }
+  
+  /* work gallery grid*/
+  
+  .work-grid {
+    padding-top: 5rem;
+  
+    border: 1px solid red;
+  
+  }
+  
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.97rem 0;
+    border: 1px solid green;
+  }
+  
+  .column{
+    flex:50%;
+    max-width: 50%;
+    padding: 0 0.4rem;
+    display: block;
+    border: 2px solid red;
+  
+  }
+  
+  .column .img{
+    width: 100%;
+    border: 2px solid blue;
+  
+  }
+  
+  .column img {
+    margin: 0 0 20px 0;
+    border-radius: 10px;
+  }
+  
+  .slideshow{
+    width:100%;
+  }
+  
+  .caption-1, .caption-2 { 
+    float: left; /* Float the containers to the left */
+    width: 100%; /* Adjust width to fit their content */
+    border: 1px solid purple; /* For debugging layout */
+  }
+  
+  .caption-1 img, .caption-2 img {
+    display: block; /* Ensure the images behave as block elements */
+    margin: 0; /* Remove any default margin */
+    padding:0;
+    border: 2px solid black;
+  }
+  
+  .caption-2{
+    padding: 20px 0 5rem 0;
+  }
+  
+  .caption-1 img{
+    padding: 0;
+  }
+  
+  
+  
+  
+  
+  /*PROJECT PAGE*/
+  .category{
+    display: flex;
+    flex-direction: row;
+  
+  }
+  
+  .description{
+    margin-bottom: 50px;
+  }
+  
+  .round-rect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0 20px;
+    margin: 0 15px 50px 0;
+    height: 46px;
+    border-radius: 30px;
+    border: 1.5px solid black;
+  
+  }
+  
+  .heading {
+    align-self: flex-start;
+    margin-bottom: 50px;
+  }
+  
+  .line{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+  }
+  
+  
+  /*Bzword*/
+  
+  .bz-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 0 4rem 0;
+    justify-content: flex-start;
+  
+  }
+  
+  .bz-grid video{
+   width:100%;
+   margin-bottom: 20px;}
+  
+  .bz-column{
+    flex: 30%;
+    border: 1px solid blue;
+  }
+  
+  .bz-column1{
+    flex:1;   
+  }
+  
+  .bz-column2{
+    flex:1.35;
+  }
+  
+  /*1O1D*/
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 8rem 0 8rem;
+  }
+  
+  .profile{
+    display: flex;
+    flex-direction: row;
+    margin: 0 50px 50px 0;
+    padding:0;
+  }
+  
+  .bio{
+    margin:auto;
+    margin-left:0;
+    margin-right: 50px;
+    align-items: center;
+  }
+  
+  .insta-section{
+    padding: 15px 200px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+  }
+  
+  .insta-section-text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .row-1o1d{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 5px;
+  
+  }
+  
+  .column-1o1d{
+    flex: 30%;
+    max-width: 33%;
+  }
+  
+  .column-1o1d img {
+    margin-bottom: 5px;
+    width:100%;
+  
+  }
+  
+  .column-1o1d video{
+    width:100%;
+    margin-bottom: 4px;
+  }
+  
+  
+  
+  
+  
+  @media only screen and (max-width: 1400px) {
+    video.me-blink{
+      width: 16rem;
+      height:auto;
+    }
+    img.imgDefault {
+      width: 16rem;
+      height:auto;
+    }
+    img.me-close-gif{
+      width: 16rem;
+      height:auto;
+    }
+    }
+  
+  
+  @media only screen and (max-width: 1000px) {
+    video.me-blink {
+      width: 13rem;
+      height:auto;
+    }
+    img.imgDefault {
+      width: 13rem;
+      height:auto;
+    }
+    img.me-close-gif{
+      width:13rem;
+      height:auto;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    video.me-blink {
+      width: 13rem;
+      height:auto;
+    }
+    img.imgDefault {
+      width: 13rem;
+      height:auto;
+    }
+    img.me-close-gif{
+      width:13rem;
+      height:auto;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .responsive {
+      width: 100%;
+    }
+  
+    video.me-blink {
+      width: 10rem;
+      height:auto;
+    }
+    img.imgDefault {
+      width: 10rem;
+      height:auto;
+    }
+    img.me-close-gif{
+      width:10rem;
+      height:auto;
+    }
+  }
+  
