@@ -756,13 +756,13 @@ video.me-blink, img.imgDefault, img.me-close-gif{
     height: 7.5rem;
     margin: 0 0 10rem 0;
   }
-  
-  }
-
-  .caption-1, .caption-2{
+   .caption-1, .caption-2{
     float:none;
     justify-content: center;
   }
+  }
+
+ 
 
 
 @media only screen and (max-width: 615px) {
