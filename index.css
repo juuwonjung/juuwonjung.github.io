@@ -146,7 +146,6 @@ footer{
   top:50%;
   transform: translate(0,-50%);
   width: calc(100% - 1.2rem);
-  border: 2px solid black;
 }
 
 .home-container{
@@ -232,7 +231,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
 .main-textbox-frame img{
   width:100%;
-  border: 2px green solid;
 }
 
 .paper-img, .main-textbox-frame{
@@ -244,9 +242,7 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
 .main-textbox-frame {
   position: relative;
-  margin:auto; 
-  border: 2px blue solid;
-  
+  margin:auto;   
 }
 
 /* text scroll */
@@ -282,8 +278,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
 .work-grid {
   padding: 16rem 0 0 0;
-  border: 2px solid red;
-
 }
 
 .row, .genta-row, .half-grid{
@@ -301,15 +295,12 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   max-width: 50%;
   padding: 0 1.28rem ;
   display: block;
-  border: 2px blue solid;
-
 }
 
 .column img, video {
   margin: 0 0 2rem 0;
   border-radius: 10px;
   width: 100%;
-  border: 2px red solid;
   box-sizing: border-box;
   
 }
@@ -322,7 +313,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 .caption-1, .caption-2 { 
   float: left; /* Float the containers to the left */
   width: 100%; /* Adjust width to fit their content */
-  border: 2px solid green;
   position: relative;
   display: flex;
   
@@ -344,7 +334,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 .caption-2 img{
   height:100%;
   width: auto;
-  border: black solid 2px;
 }
 
 .caption-1 img{
@@ -352,13 +341,10 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   height: 100%;
   width: auto;
   object-fit: contain;
-  border: 2px solid yellow;
-  
 }
 
 
 .caption-1{
-  border: 2px solid pink;
   height: 7rem;
 }
 
@@ -416,7 +402,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   flex: 1;
   margin: auto;
   min-width:0;
-  border: 2px solid blue;
 }
 
 .flickr-col2 video{
@@ -631,7 +616,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
 .genta-row video{
   width: 100%;
-  border: 2px blue solid;
 }
 
 .genta-double-col, .genta-col{
@@ -758,13 +742,11 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 @media only screen and (max-width: 850px) {
   .row{
     flex-direction: column;
-    border: 2px purple solid;
   }
   .column {
     flex: 100%;
     max-width: 100%;
     display: block;
-    border: 2px green solid;
     margin-bottom: 0;}
 
   .caption-1{
