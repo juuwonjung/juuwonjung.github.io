@@ -28,8 +28,10 @@ body{
 a {
     text-decoration: none;
     color:#0A0A0A;
-    display: inline-block;
+    display: inline-block;     
 }
+
+
 
 body{
   margin:0;
@@ -76,7 +78,7 @@ a:hover, a:active{
   cursor: url('./Sources/work gallery/cursor-hap.png') 16 16, auto;
 }
 
-#noriThumb:hover, #agfomThumb:hover {
+.img:hover {
   cursor: url('./Sources/work gallery/cursor-so.png') 16 16, auto;
 }
 
@@ -279,7 +281,8 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 /* work gallery grid*/
 
 .work-grid {
-  padding-top: 16rem;
+  padding: 16rem 0 0 0;
+  border: 2px solid red;
 
 }
 
@@ -289,53 +292,75 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 }
 
 .row {
-  padding: 3.104rem 0;
+  padding: 3.2rem 0;
 }
 
 
 .column {
   flex:50%;
   max-width: 50%;
-  padding: 0 1.28rem;
+  padding: 0 1.28rem ;
   display: block;
+  border: 2px blue solid;
 
 }
 
-.column .img{
-  width: 100%;
-
-}
-
-.column img {
-  margin: 0 0 20px 0;
+.column img, video {
+  margin: 0 0 2rem 0;
   border-radius: 10px;
+  width: 100%;
+  border: 2px red solid;
+  box-sizing: border-box;
+  
 }
 
 .slide-1o1d{
   width:100%;
 }
 
+
 .caption-1, .caption-2 { 
   float: left; /* Float the containers to the left */
   width: 100%; /* Adjust width to fit their content */
+  border: 2px solid green;
+  position: relative;
+  display: flex;
+  
 }
 
 .caption-1 img, .caption-2 img {
   display: block; /* Ensure the images behave as block elements */
   margin: 0; /* Remove any default margin */
   padding:0;
+  
 }
 
 .caption-2{
-  padding: 20px 0 16rem 0;
+  padding: 2rem 0 0 0;
+  margin: 0 0 12rem 0;
+  height: 8rem;
+}
+
+.caption-2 img{
+  height:100%;
+  width: auto;
+  border: black solid 2px;
 }
 
 .caption-1 img{
   padding: 0;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  border: 2px solid yellow;
+  
 }
 
 
-
+.caption-1{
+  border: 2px solid pink;
+  height: 7rem;
+}
 
 
 /*PROJECT PAGE*/
@@ -697,9 +722,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 }
 
 
-
-
-
 @media only screen and (max-width: 1400px) {
 
   .genta-container{
@@ -711,22 +733,63 @@ video.me-blink, img.imgDefault, img.me-close-gif{
     width: 70%;
     padding: 14rem 0 0 30rem;
   }
-
-
   }
 
 
-@media only screen and (max-width: 1000px) {
-
+@media only screen and (max-width: 1300px) {
+  .caption-1{
+    height: 6rem;
+  }
+  .caption-2{
+    height: 7rem;
+  }
 }
 
-@media only screen and (max-width: 900px) {
-
+@media only screen and (max-width: 1100px) {
+  .caption-1{
+    height: 5rem;
+  }
+  .caption-2{
+    height: 6rem;
+    margin: 0 0 10rem 0;
+  }
 }
 
-@media only screen and (max-width: 800px) {
-  .responsive {
-    width: 100%;
+@media only screen and (max-width: 850px) {
+  .row{
+    flex-direction: column;
+    border: 2px purple solid;
+  }
+  .column {
+    flex: 100%;
+    max-width: 100%;
+    display: block;
+    border: 2px green solid;
+    margin-bottom: 0;}
+
+  .caption-1{
+    height: 6.5rem;
+  }
+  .caption-2{
+    height: 7.5rem;
+    margin: 0 0 10rem 0;
+  }
+  
+  }
+
+  .caption-1, .caption-2{
+    float:none;
+    justify-content: center;
+  }
+
+
+@media only screen and (max-width: 615px) {
+  .caption-1{
+    height: 5rem;
+  }
+  .caption-2{
+    height: 6rem;
+    margin: 0 0 8rem 0;
   }
 
 
@@ -766,6 +829,29 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   .landing-page-wrapper{
     grid-template-columns: 5% 90% 5%;
 
+  }
+
+  .caption-1{
+    height: 4rem;
+  }
+  .caption-2{
+    height: 4.5rem;
+    padding: 0.8rem 0 0 0;
+    margin: 0 0 6rem 0;
+  }
+
+}
+
+@media only screen and (max-width: 375px) {
+
+  .caption-1{
+    height: 3.5rem;
+  }
+  .caption-2{
+    height: 5rem;
+    height: 3.7rem;
+    padding: 0.8rem 0 0 0;
+    margin: 0 0 6rem 0;
   }
 
 }
