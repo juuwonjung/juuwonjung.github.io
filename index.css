@@ -76,7 +76,7 @@ a:hover, a:active{
   cursor: url('./Sources/work gallery/cursor-hap.png') 16 16, auto;
 }
 
-#noriThumb:hover {
+#noriThumb:hover, #agfomThumb:hover {
   cursor: url('./Sources/work gallery/cursor-so.png') 16 16, auto;
 }
 
