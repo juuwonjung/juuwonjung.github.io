@@ -326,9 +326,9 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 }
 
 .caption-2{
+  height: 8rem;
   padding: 2rem 0 0 0;
   margin: 0 0 12rem 0;
-  height: 8rem;
 }
 
 .caption-2 img{
