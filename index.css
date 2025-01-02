@@ -135,7 +135,6 @@ footer{
   top:50%;
   transform: translate(0,-50%);
   width: calc(100% - 1.2rem);
-  border: 2px solid black;
 }
 
 .home-container{
@@ -212,7 +211,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
 .main-textbox-frame img{
   width:100%;
-  border: 2px green solid;
 }
 
 .paper-img, .main-textbox-frame{
@@ -225,7 +223,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 .main-textbox-frame {
   position: relative;
   margin:auto; 
-  border: 2px blue solid;  
 }
 
 /* text scroll */
@@ -363,7 +360,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   flex: 1;
   margin: auto;
   min-width:0;
-  border: 2px solid blue;
 }
 
 .flickr-col2 video{
@@ -550,7 +546,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
 .genta-row video{
   width: 100%;
-  border: 2px blue solid;
 }
 
 .genta-double-col, .genta-col{
