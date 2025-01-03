@@ -402,22 +402,32 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
 
 /* Flicker */
-.flicker-container img{
-  margin: 8rem 0;
+.flickr-container {
+  display: flex;
+  height: 100vh;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .flickr-grid{
   display: flex;
   flex-direction: row;
-  column-gap: 100px;
+  column-gap: 10%;
 
 }
 
 .flickr-col1, .flickr-col2{
   gap: 20px;
-  flex: 1;
   margin: auto;
   min-width:0;
+}
+
+.flickr-col1{
+  flex: 1.17
+}
+
+.flickr-col2{
+  flex: 1
 }
 
 .flickr-col2 video{
@@ -426,12 +436,16 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   height:750px;
 }
 
+.container2{
+  margin: 0 0 0 20rem; 
+  width: 70%; 
+}
+
 .flicker-video-container{
   display: flex;
   width: calc(100% - 25.6rem); /* Account for left and right padding */
   
 }
-
 
 .flicker-video-container iframe{
   width:100%;
@@ -439,6 +453,7 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   aspect-ratio: 16/9;
   
 }
+
 
 .flickr-column, .bz-column{
   flex: 30%;
