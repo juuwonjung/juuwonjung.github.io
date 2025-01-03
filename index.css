@@ -675,19 +675,15 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 }
 
 .insta-section{
-  padding: 15px 200px;
-  width:100%;
+  padding: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-
 }
 
 .insta-section-text{
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-evenly; 
 }
 
 .row-1o1d{
