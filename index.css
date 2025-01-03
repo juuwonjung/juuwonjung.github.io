@@ -91,6 +91,7 @@ a:hover, a:active{
     padding-top: 2.56rem;
     width: calc(100% - 3.84rem); /* subtract added removed space from body padding page */
     padding: 0 1.6rem;
+    z-index: 100;
   
   }
   
