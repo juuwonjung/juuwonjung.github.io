@@ -621,7 +621,9 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   opacity: 1;
 }
 
-
+.genta-grid{
+  margin: 10rem auto;
+}
 
 .genta-row{
   flex-direction: row;
