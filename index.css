@@ -348,6 +348,14 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   height: 7rem;
 }
 
+#captionLessMargin2{
+  margin: 0 0 0 0;
+}
+
+#captionLessMargin1{
+  margin: 0 0 0 0;
+}
+
 
 /*PROJECT PAGE*/
 .category{
@@ -736,6 +744,16 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   }
 }
 
+@media only screen and (max-width: 1010px) {
+  .caption-1{
+    height: 4.8rem;
+  }
+  .caption-2{
+    height: 5.8rem;
+    margin: 0 0 10rem 0;
+  }
+}
+
 @media only screen and (max-width: 910px) {
   .row{
     flex-direction: column;
@@ -755,11 +773,18 @@ video.me-blink, img.imgDefault, img.me-close-gif{
     height: 7.5rem;
     margin: 0 0 10rem 0;
   }
+
+  #captionLessMargin1{
+    margin: 0 0 10rem 0;
+  }
+
   .caption-1, .caption-2{
     float:none;
     justify-content: center;
   }
   }
+
+  
 
 @media only screen and (max-width: 615px) {
   .caption-1{
@@ -769,10 +794,23 @@ video.me-blink, img.imgDefault, img.me-close-gif{
     height: 6rem;
     margin: 0 0 8rem 0;
   }
+
+  #captionLessMargin1{
+    margin: 0 0 8rem 0;
+  }
+
+  footer{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
 }
 
 @media only screen and (max-width: 425px) {
-  *{font-size: 5px;}
 
   body{
     padding: 0 1rem;  
@@ -786,22 +824,21 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   line-height: 1.6
   }
 
+
   h5{
     font-size: 16px;
   }
 
   h6{
     font-weight: 600;
-
   }
 
   h7{
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .landing-page-wrapper{
     grid-template-columns: 5% 90% 5%;
-
   }
 
   .caption-1{
@@ -813,6 +850,9 @@ video.me-blink, img.imgDefault, img.me-close-gif{
     margin: 0 0 6rem 0;
   }
 
+  #captionLessMargin1{
+    margin: 0 0 6rem 0;
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -824,7 +864,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
     height: 5rem;
     height: 3.7rem;
     padding: 0.8rem 0 0 0;
-    margin: 0 0 6rem 0;
-  }
 
+  }
 }
