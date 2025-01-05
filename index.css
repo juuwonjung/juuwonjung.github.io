@@ -952,6 +952,9 @@ video.me-blink, img.imgDefault, img.me-close-gif{
     height: 2.7rem;
   }
 
+  .column {
+    padding:0;}
+
   .container{
     margin:0;
   }
