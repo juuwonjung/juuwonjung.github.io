@@ -789,13 +789,11 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 @media only screen and (max-width: 910px) {
   .row{
     flex-direction: column;
-    border: 2px purple solid;
   }
   .column {
     flex: 100%;
     max-width: 100%;
     display: block;
-    border: 0.1px green solid;
     margin-bottom: 0;}
 
   .caption-1{
@@ -967,7 +965,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   }
 
   .container{
-    border: 2px solid green;
     margin:25px;
   }
 
