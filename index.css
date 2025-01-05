@@ -556,7 +556,7 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 .slideshow-container{
   position: relative;
   margin: 9.6rem auto;
-  max-width: 108rem;
+  width: 80%;
 }
 
 .gentaSlide, .flickerSlide{
