@@ -881,6 +881,10 @@ video.me-blink, img.imgDefault, img.me-close-gif{
     margin: 1rem 0 8rem 0;
   }
 
+  #captionLessMargin2 {
+    margin: 1rem 0 0 0;
+  }
+
   footer{
     height: 80px;
     width: 100%;
