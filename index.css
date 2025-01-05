@@ -693,7 +693,7 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 .row-1o1d{
  display: flex;
  flex-wrap: wrap;
- gap: 5px;
+ gap: 1px;
 }
 
 .column-1o1d{
@@ -961,6 +961,19 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
   .nav-bar {
     width: calc(100% - 5rem);
+}
+
+  .profile{
+    flex-direction: column;
+    gap: 0px;
+  }
+  .bio{
+    align-self: flex-start;
+  }
+
+  .insta-section {
+    padding: 15px 30px;
+
 }
 }
 
