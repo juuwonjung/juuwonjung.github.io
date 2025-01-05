@@ -700,14 +700,10 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   max-width: 33%;
 }
 
-.column-1o1d img {
-  margin-bottom: 5px;
+.column-1o1d img, .column-1o1d video {
+  margin-bottom: 1px;
   width:100%;
-}
-
-.column-1o1d video{
-  width:100%;
-  margin-bottom: 4px;
+  border-radius: 0;
 }
 
 @media only screen and (max-width: 1420px) {
