@@ -344,7 +344,8 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 .category{
   display: flex;
   flex-direction: row;
-
+  width: 100%;
+  gap: 15px;
 }
 
 .description{
@@ -356,12 +357,12 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   justify-content: center;
   align-items: center;
   width: fit-content;
-  padding: 0 20px;
-  margin: 0 15px 50px 0;
+  white-space: nowrap;
+  padding: 15px;
+  margin-bottom: 50px;
   height: 46px;
   border-radius: 30px;
   border: 1.5px solid black;
-
 }
 
 .heading {
@@ -748,8 +749,8 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   }
   .round-rect{
     height: 40px;
-    padding: 0 10px;
-    margin: 0 20px 30px 0;
+    padding: 10px;
+    margin-bottom: 30px;
   }
 }
 
@@ -812,10 +813,13 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   .round-rect{
     height: 32px;
     padding: 0 10px;
-    margin-right: 10px;
   }
+  
   .flickr-container{
     width: 90%;
+  }
+  .category{
+    gap: 10px;
   }
 }
 
