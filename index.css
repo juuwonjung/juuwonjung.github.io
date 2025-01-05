@@ -80,7 +80,6 @@ a:hover, a:active{
     transform: translate(-50%, 0);
     position: fixed; /* Set the navbar to fixed position */
     top:0;
-    padding-top: 2.56rem;
     width: calc(100% - 4rem); /* subtract added removed space from body padding page */
     z-index: 100;
   }
@@ -841,7 +840,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   }
 
   .nav-bar {
-    padding-top: 2rem;
     width: calc(100% - 6rem);
   }
   .container2{
