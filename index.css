@@ -17,17 +17,17 @@ body, html {
 
 body{
   cursor:url('./Sources/work gallery/cursor-def.png') 16 16, auto;
+  margin:0;
+}
+
+.body-container{
+  padding:0 2rem;
 }
 
 a {
     text-decoration: none;
     color:#0A0A0A;
     display: inline-block;     
-}
-
-body{
-  margin:0;
-  padding: 0 1.92rem;  
 }
 
 img, video {
@@ -824,7 +824,7 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 }
 
 @media only screen and (max-width: 730px){
-  body{
+  .body-container{
     margin-top: 150px;
     padding: 0 3rem;
   }
@@ -920,7 +920,7 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
 @media only screen and (max-width: 425px) {
 
-  body{
+  .body-container{
     padding: 0 2.5rem;  
   }
   h4{
