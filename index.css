@@ -693,7 +693,7 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
 .column-1o1d{
   flex: 30%;
-  max-width: 33%;
+  max-width: 33.33%;
 }
 
 .column-1o1d img, .column-1o1d video {
