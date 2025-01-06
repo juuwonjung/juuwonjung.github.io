@@ -443,10 +443,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   flex: 45%;
 }
 
-.half-column img{
-  margin: 8rem 0;
-}
-
 .flickr-feature-grid{
   display: flex;
   flex-wrap: wrap;
