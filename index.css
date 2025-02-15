@@ -85,11 +85,17 @@ a:hover, a:active{
     transform: translate(-50%, 0);
     position: fixed; /* Set the navbar to fixed position */
     top:0;
-    width: calc(100% - 4rem); /* subtract added removed space from body padding page */
+    width: calc(100% - 8rem); /* subtract added removed space from body padding page */
     z-index: 100;
   }
   
   /* Links inside the navbar */
+  .nav-bar-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .nav-bar-links ul{
     float: right;
     list-style: none; 
@@ -128,141 +134,54 @@ footer{
   justify-content: center;
 }
 
-/*HOME PAGE*/
- 
-/*Main landing page gif grid*/
-
-.landing-page-wrapper{
-  display:grid;
-  grid-template-columns: 25% 50% 25%;
-  text-align: center;
-  position:absolute;
-  top:50%;
-  transform: translate(0,-50%);
-  width: calc(100% - 1.2rem);
-}
-
-.home-container{
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-div.main-grid, .main-nested-top, .main-nested-bottom {
-  text-align: center;
-  width: 100%;
-  display: block;
-}
-
-.main-grid img, video {
-  width: 100%;
-}
-
-
-
-.main-nested-top{
-  padding-bottom:3.2rem; 
-}
-
+/* Loader Animation */
 
 /* me embroidery on hover close eyes - overlay image*/
 
-
-.main-me-wrapper{ 
+.loader{
+  min-height: 100vh;
+  width: 100vw;
+  background: white;
+  padding:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
   margin: auto;
-  position: relative;
+  transition: transform 1s ease-in-out;
+  z-index: 2000;
+}
+
+
+video.me-blink{
+  max-width: 330px;
+}
+
+/*HOME PAGE*/
  
-  
+/*Main landing page intro text*/
+.intro-text{
+  padding: 13rem 0;
+  display: block;
 }
 
-.me-blink{
-  z-index: 100;
-  opacity: 1;
-  position: relative;
-}
-
-.main-me-wrapper img, .main-me-wrapper video, .hover-image-blink, .image-blink-default{
+.intro-paragraph{
+  text-align: left;
+  width:fit-content;
   margin: auto;
 }
 
-
-.hover-image-blink, .image-blink-default {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
+.intro-text p{
+  font-family: juwonRegular;
+  font-size: 3rem;
+  line-height: 2.5;
 }
 
-video.me-blink, img.imgDefault, img.me-close-gif{
-  max-width: 600px;
-}
-
-.hover-image-blink {
-  z-index: 2;
-}
-
-.image-blink-default{
-  z-index: 3;
-}
-
-
-.image-blink-default:hover{
-  opacity: 0;
-}
-
-
-/* text image overlay to paper */
-
-.main-textbox-frame img{
-  width:100%;
-}
-
-.paper-img, .main-textbox-frame{
-  width: 100%;
-  min-width: 150px;
-  max-width: 400px;
-}
-
-.main-textbox-frame {
-  position: relative;
-  margin:auto;   
-}
-
-/* text scroll */
-
-
-.main-text-img{
-  overflow: hidden;
-  height: 65px;
-  position: absolute;
-  top:10%;
-}
-
-.main-text-img div div{
-  display: inline-block;
-  padding: 4px 12px;  
-  margin-bottom: 20px;
-}
-
-.main-text-img div:nth-child(1){
-  animation: scroll 10s linear infinite;
-}
-
-@keyframes scroll{
-  0%, 23%{margin-top: -10px}
-  35%, 60%{margin-top: -50px}
-  70%, 93%{margin-top: -70px}
-  100%{margin-top: -81.5px}
-}
 
 /* work gallery grid*/
 
 .work-grid {
-  padding: 16rem 0 0 0;
+  padding: 0;
 }
 
 .row, .genta-row, .half-grid{
@@ -272,13 +191,13 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
 .row {
   padding: 3.2rem 0;
+  justify-content: space-between;
 }
 
 
 .column {
-  flex:50%;
-  max-width: 50%;
-  padding: 0 1.28rem ;
+  flex:49%;
+  max-width: 49%;
   display: block;
 }
 
