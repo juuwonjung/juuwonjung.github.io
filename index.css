@@ -88,6 +88,11 @@ a:hover, a:active{
     width: calc(100% - 8rem); /* subtract added removed space from body padding page */
     z-index: 100;
   }
+
+nav a{
+  font-family: juwonRegular;
+  font-size: 2.2rem;
+}
   
   /* Links inside the navbar */
   .nav-bar-links{
@@ -99,7 +104,6 @@ a:hover, a:active{
   .nav-bar-links ul{
     float: right;
     list-style: none; 
-    font-size: 3.2rem;
   }
 
   .nav-bar-links ul li{
