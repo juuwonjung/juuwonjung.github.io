@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face{
+  font-family: juwonRegular;
+  src: url("./Juwon_medium-Regular.ttf");
+}
+
 html{
   font-size: 10px;
   letter-spacing: 0.5px;
