@@ -1,83 +1,130 @@
-
-
 gsap.registerPlugin(ScrollTrigger) 
 
-//jQuery - $(selector).action() Selector = Html element to be selected / Action - action to be performed  
-//$('#homeVideo').on('ended', function(){this.playedThrough = true;});
+import anime from "./anime-master/lib/anime.es.js";  // Relative path
 
-/* Home Main video play on initial load OR scroll back to section */
-var videoHasPlayedOnce = false;
-var videoHasReplayedOnce = true;
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("homeVideo");
+  const loader = document.querySelector("section.loader");
+  const mainContent = document.querySelector(".body-container");
+  const doc = document.documentElement;
 
-// Track whether the page is being initialized
-var isInitialLoad = true;
+  // Check if it's the home page
+  let isHome = document.body.classList.contains("home");
+  let isFirstVisit = !sessionStorage.getItem('visited'); // Check if it's the user's first visit
+
+  // Detect if the page is being refreshed manually
+  let navigationType = performance.getEntriesByType("navigation")[0].type;
+  let isManualRefresh = navigationType === "reload";
+  let siteBaseURL = location.protocol + "//" + location.host;
+  let sameReferrer = document.referrer.startsWith(siteBaseURL) && document.referrer !== "";
+
+  console.log("Current site URL:", siteBaseURL);
+  console.log("Referrer URL:", document.referrer);
+  console.log("Is same referrer?", sameReferrer);
+
+  if (isHome) { // if user is in homepage
+      
+      //store url of previous page . If document.referrer contains my website base url, it means they came from the same site
+      if (isManualRefresh || !sameReferrer) {
+        console.log("New visit or external referrer detected.");
+        document.documentElement.classList.add("locked");
+        window.addEventListener("DOMContentLoaded", () => {
+            mainContent.style.display = "none"; // Hide main content initially
+            mainContent.style.visibility = "hidden"; // Ensure it's not visible
+            mainContent.style.opacity = "0"; // Make sure opacity is 0
+
+
+            window.scrollTo(0, 0);
+            document.body.scrollTo(0, 0);
+            video.playsInline = true;
+            video.setAttribute("muted", "");
+            video.defaultMuted = true;
+        });
+
+        video.addEventListener("ended", () => {
+            anime({
+                targets: video,
+                opacity: [1, 0],  // Scale from 100% to 0%
+                duration: 250, // Animation duration (1s)
+                delay: 0,
+                easing: "linear",
+                complete: () => {
+                    console.log("Animation complete. Unlocking page...");
+                    setTimeout(() => {
+                      video.style.display = "none"; // Hide the video after the animation finishes
+                  }, 60); // Wait for 400ms (same duration as the animation)
+
+                  mainContent.style.display = "block"; 
+                  mainContent.style.visibility = "visible"; // Set visibility to visible
+                  mainContent.style.opacity = "0"; // Start with opacity 0
+
+                    anime({
+                      targets: mainContent,
+                      opacity: [0, 1], // Fade in main content
+                      duration: 200,
+                      easing: "easeInOutQuad",
+                      complete: () => {
+                          console.log("🎉 Main content fully visible!");
+                          doc.classList.remove("locked");
+                          if (loader) loader.parentNode.removeChild(loader);
+                          window.scrollTo(0, 0);
+                          document.body.scrollTo(0, 0);
+                      }
+                  });      
+                }
+            });
+            console.log("Displaying main content...");
+            mainContent.style.display = "block";
+        });
+    } else {
+      console.log("Removing loader immediately...");
+      loader?.parentNode?.removeChild(loader);
+      // Ensure 'locked' class is removed when navigating back from another page
+          console.log("Removing 'locked' class after same-site navigation.");
+          doc.classList.remove("locked");
+      }  
+    }
+}
+);
+
+/*playground show caption on hover image */
+
+$(document).ready(function(){
+  $(".play-column").hover(
+      function() {
+          $(this).find(".play-caption").css("opacity", "1");
+      }, 
+      function() {
+          $(this).find(".play-caption").css("opacity", "0");
+      }
+  );
+});
+
+$(document).ready(function(){
+  $(".play-column2").hover(
+      function() {
+          $(this).find(".play-caption2").css("opacity", "1");
+      }, 
+      function() {
+          $(this).find(".play-caption2").css("opacity", "0");
+      }
+  );
+});
+
 
 $(document).ready(function() {
-    // plays video as soon as page is initialized
-    var homeVideo = document.getElementById("homeVideo");
-    
-    homeVideo.currentTime = 0; // Reset to start
-    homeVideo.play().then(() => {
-            videoHasPlayedOnce = true; // log that video has been played so that it doesn't play again until re-entered
-            videoHasReplayedOnce = true; // log that video has been replayed so that it doesn't replay while in first scroll range
-            console.log("Video played on initial load");
-        }).catch(error => {
-            console.error("Initial video play failed: ", error);
-        });
-    
+  // When mouse enters an image (thumbnail)
+  $(".col-img-container").hover(
+      function() {
+          // Get the caption-2 related to this image
+          $(this).find(".caption-2").stop(true, true).fadeTo(100, 1); // Fade caption-2 in
+      },
+      function() {
+          // Get the caption-2 related to this image
+          $(this).find(".caption-2").stop(true, true).fadeTo(100, 0); // Fade caption-2 out
+      }
+  );
 });
-
-
-$(window).scroll(function() {
-    var scrollPosition = $(window).scrollTop(); // get scroll position 
-    var homeVideo = document.getElementById("homeVideo");
-   // var imgDefault = document.getElementById("imgDefault");
-    console.log(scrollPosition)
- // On first load, skip the replay logic
- if (isInitialLoad) {
-    isInitialLoad = false; // Ensure this block runs only once
-    return; // Skip the rest of the scroll handler during initialization
-        
-    }
-    
-
-// If the user is scrolling back into the range (0 < 580), and video has been played once but not replayed, and video was paused.
-if (scrollPosition >= 0 && scrollPosition < 400 && !videoHasReplayedOnce && videoHasPlayedOnce && homeVideo.paused){
-    
-        $(homeVideo).css("z-index", "4");
-        homeVideo.currentTime = 0; // Reset to the start
-        homeVideo.play().then(() => {
-            videoHasReplayedOnce = true; // Mark video as replayed
-            console.log("Video replayed once");
-        }).catch(error => {
-            console.error("Video replay failed: ", error);
-        });
-    
-}
-else {
-    // If scroll position is outside the range (580 or greater) and video hasn't been paused OR it ended, pause the video
-    if (scrollPosition >= 400 && (!homeVideo.paused || homeVideo.ended)) { 
-        homeVideo.pause();
-        console.log("Video paused");
-    }
-
-    if (homeVideo.ended){
-        homeVideo.pause();
-        console.log("video paused because it ended");
-        $(homeVideo).css("z-index", "-3");
-       // homeVideo.style.z-index = '-1';
-
-    }
-
-    // Reset the flags only when the user leaves the range
-    if (scrollPosition >= 400) {
-        videoHasReplayedOnce = false;
-        console.log("Flags reset: videoHasReplayedOnce (so it's false");
-    }
-   
-}
-});
-
 
 /*genta slideshow manual */
 
@@ -87,7 +134,7 @@ function scrollToSlide(videoId) {
     videoElement.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
   }
 }
-  
+
 /* 1o1d Home Page Slideshow automatic*/
 
 let autoSlideIndex = 0;
@@ -106,4 +153,3 @@ function autoCarousel() {
   slideShow[autoSlideIndex-1].style.display = "block";
   setTimeout(autoCarousel, 2000); // Change image every 2 seconds
 }
-
