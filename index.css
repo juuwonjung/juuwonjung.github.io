@@ -233,6 +233,7 @@ footer{
   margin: auto;
   transition: opacity 0.5s ease-in-out; /* Fade-out transition */
   z-index: 2000;
+  overflow: hidden ! important;
 }
 
 
