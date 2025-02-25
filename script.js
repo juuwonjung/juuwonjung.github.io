@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*playground show caption on hover image */
 
-$(document).ready(function(){
+$(window).on("load", function() {
   $(".play-column").hover(
       function() {
           $(this).find(".play-caption").css("opacity", "1");
@@ -100,7 +100,7 @@ $(document).ready(function(){
   );
 });
 
-$(document).ready(function(){
+$(window).on("load", function() {
   $(".play-column2").hover(
       function() {
           $(this).find(".play-caption2").css("opacity", "1");
@@ -112,18 +112,15 @@ $(document).ready(function(){
 });
 
 
-$(document).ready(function() {
-  // When mouse enters an image (thumbnail)
-  $(".col-img-container").hover(
-      function() {
-          // Get the caption-2 related to this image
-          $(this).find(".caption-2").stop(true, true).fadeTo(100, 1); // Fade caption-2 in
-      },
-      function() {
-          // Get the caption-2 related to this image
-          $(this).find(".caption-2").stop(true, true).fadeTo(100, 0); // Fade caption-2 out
-      }
-  );
+$(window).on("load", function() {
+    $(".col-img img, .col-img video").hover(
+        function() {
+            $(this).closest(".column").find(".caption-2").stop(true, true).fadeTo(100, 1);
+        },
+        function() {
+            $(this).closest(".column").find(".caption-2").stop(true, true).fadeTo(100, 0);
+        }
+    );
 });
 
 /*genta slideshow manual */
