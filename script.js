@@ -3,6 +3,18 @@ gsap.registerPlugin(ScrollTrigger)
 import anime from "./anime-master/lib/anime.es.js";  // Relative path
 
 document.addEventListener("DOMContentLoaded", () => {
+   if (document.documentElement.classList.contains("locked")) {
+    document.body.style.overflow = "hidden";
+  }  
+
+  function fixLoaderHeight() {
+  if (document.documentElement.classList.contains("locked")) {
+    document.querySelector(".loader").style.height = window.innerHeight + "px";
+  }
+}
+  
+window.addEventListener("resize", fixLoaderHeight);
+window.addEventListener("load", fixLoaderHeight);
   const video = document.getElementById("homeVideo");
   const loader = document.querySelector("section.loader");
   const mainContent = document.querySelector(".body-container");
