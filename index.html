@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html class="locked">
 <head>
 <title>Juwon Jung</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="./index.css">
+<link rel="stylesheet" href="./index.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono&display=swap" rel="stylesheet">
@@ -12,14 +12,15 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script src="./script.js" defer></script>
+
+<script type="module" src="./script.js" defer></script>
 </head>
-<body>
-  <section class="loader">
+<body class="home">
+<section class="loader">
     <video id ="homeVideo" class="me-blink" height="auto" muted="" playsinline="" autoplay="">
         <source src="./Sources/home/me-shuffle-final.mp4" type = "video/mp4">
       </video>
-  </section>
+</section>
 <div class="body-container">
 <!-- Navbar (sit on top) -->
 <nav>
@@ -31,7 +32,7 @@
                 <path d="M14.4884 2.74543C15.286 1.82451 16.7146 1.82451 17.5121 2.74543L28.7228 15.6904C29.8445 16.9857 28.9244 18.9997 27.2109 18.9997H4.78961C3.07611 18.9997 2.15601 16.9857 3.27776 15.6904L14.4884 2.74543Z"/>
             </svg>
         </a>
-       <ul>
+        <ul>
         <li>
         <a href="playground.html">:D</a></li>
        <li> <a href="./me.html">mE</a></li>
@@ -39,88 +40,199 @@
     </div>
   </div>
   </nav>
-
-
 <!-- Landing Page -->
 
 <!--Work Gallery-->
 
 <div class="work-gallery">
-  <div class="intro-text">
+
+<div class="intro-text">
     <div class="intro-paragraph">
-    <p>Hello!  I'm Juwon. </p>
-    <p>I design emotional, thoughtful, and experimental interactions.</p>
-  </div>
-  </div>
+            <div class="intro-wavy">
+            <span class="word">
+            <span class="letter">H</span>
+            <span class="letter">e</span>
+            <span class="letter">l</span>
+            <span class="letter">l</span>
+            <span class="letter">o</span>
+            <span class="letter">!</span>
+            </span>
+            <span class="letter" style="color:white">o</span>
+            <p>I'm</p>
+            
+            <span class="letter" style="color:white">o</span>
+            <span class="word">
+            <span class="letter">J</span>
+            <span class="letter">u</span>
+            <span class="letter">w</span>
+            <span class="letter">o</span>
+            <span class="letter">n</span>
+            <span class="letter">.</span>
+            </span>
+            <br>
+            <p>I design</p>
+            <span class="letter" style="color:white">o</span>
+            <span class="word">
+            <span class="letter">e</span>
+            <span class="letter">m</span>
+            <span class="letter">o</span>
+            <span class="letter">t</span>
+            <span class="letter">i</span>
+            <span class="letter">o</span>
+            <span class="letter">n</span>
+            <span class="letter">a</span>
+            <span class="letter">l</span>
+            <span class="letter">,</span>
+            </span>
+            <span class="letter" style="color:white">o</span>
+            <span class="word">
+            <span class="letter">t</span>
+            <span class="letter">h</span>
+            <span class="letter">o</span>
+            <span class="letter">u</span>
+            <span class="letter">g</span>
+            <span class="letter">h</span>
+            <span class="letter">t</span>
+            <span class="letter">f</span>
+            <span class="letter">u</span>
+            <span class="letter">l</span>
+            <span class="letter">,</span>
+            </span>
+            <span class="letter" style="color:white">o</span>
+            <p>and</p>
+            <span class="letter" style="color:white">o</span>
+            <span class="word">
+            <span class="letter">e</span>
+            <span class="letter">x</span>
+            <span class="letter">p</span>
+            <span class="letter">e</span>
+            <span class="letter">r</span>
+            <span class="letter">i</span>
+            <span class="letter">m</span>
+            <span class="letter">e</span>
+            <span class="letter">n</span>
+            <span class="letter">t</span>
+            <span class="letter">a</span>
+            <span class="letter">l</span>
+            </span>
+            <span class="letter" style="color:white">o</span>
+            <span class="word">
+            <span class="letter">i</span>
+            <span class="letter">n</span>
+            <span class="letter">t</span>
+            <span class="letter">e</span>
+            <span class="letter">r</span>
+            <span class="letter">a</span>
+            <span class="letter">c</span>
+            <span class="letter">t</span>
+            <span class="letter">i</span>
+            <span class="letter">o</span>
+            <span class="letter">n</span>
+            <span class="letter">s</span>
+            <span class="letter">.</span>
+             </span>
+</div>
+</div>
+</div>
     <div class="work-grid">
         <div class="row">
             <div class="column">
                 
-                <a href="./flickr.html"><video src="./Sources/work gallery/flicker-through-thum.mp4" autoplay="" muted="" loop="" playsinline></video></a>
-                <div class="caption-1">
-                    <a href="./flickr.html"><img id="flickrC1"src="./Sources/work gallery/flicker-medium2.gif"></a>
-                </div>
-                <div class="caption-2">
-                    <a href="./flickr.html"><img id="flickrC2" src="./Sources/work gallery/flickr-caption2.png" ></a>
-                </div>
-
+                <div class="col-img-container">
+                <div class="col-img">
+                   
+                    <a><img class="img" src="./Sources/work gallery/agfom-thumb2.png"></a>
+                    <a><img class="top-img" src="./Sources/work gallery/agfom-thumb1.png"></a>
+                    
+                    </div>
+                    <div class="caption-1">
+                        <a><img class="img" src="./Sources/work gallery/agfom-medium2.gif"></a>
+                    </div>
+                    <div class="caption-2">
+                        <a><img class="img" src="./Sources/work gallery/agfom-caption2.png"></a>
+                    </div>
+                    </div>  
+                <div class="col-img-container">
+                <div class="col-img">    
                 <a href="./genta.html"><video src="./Sources/work gallery/genta-thumb.mp4" autoplay="" muted="" loop="" playsinline></video></a>
+                  
+                </div>
                 <div class="caption-1">
-                    <a href="./genta.html"><img id="gentaC1"src="./Sources/work gallery/genta-medium2.gif" ></a>
+                    <a href="./genta.html"><img id="gentaC1"src="./Sources/work gallery/grandpa-medium.gif" ></a>
                 </div>
                 <div class="caption-2">
-                    <a href="./genta.html"><img id="gentaC2" src="./Sources/work gallery/genta-caption2.png"></a>
+                    <a href="./genta.html"><img id="gentaC2" src="./Sources/work gallery/grandpa-caption2.png"></a>
                 </div>
-
-                <a href="./buzzword.html"><video src="./Sources/work gallery/bzword-thumb.mp4" autoplay="" muted="" loop="" playsinline></video></a>
+                </div>         
+                <div class="col-img-container">
+                <div class="col-img">                 
+                <a href="./buzzword.html"><video src="./Sources/work gallery/bzword-thumb.mp4" autoplay="" muted="" loop=""></video></a>        
+            </div>
                 <div class="caption-1">
                     <a href="./buzzword.html"><img id="bzwordC1"src="./Sources/work gallery/bzword-medium2.gif" ></a>
                 </div>
                 <div class="caption-2" id="captionLessMargin1">
                     <a href="./buzzword.html"><img  id="bzwordC2" src="./Sources/work gallery/bz-caption2.png" ></a>
-                </div>
-      
+                </div>  
+              </div>
             </div>
-        
-        
             <div class="column">
-                <a><img class="img" src="./Sources/work gallery/agfom-thumb.png"></a>
-                <div class="caption-1">
-                    <a><img class="img" src="./Sources/work gallery/agfom-medium2.gif"></a>
-                </div>
-                <div class="caption-2">
-                    <a><img class="img" src="./Sources/work gallery/agfom-caption2.png"></a>
-                </div>
-                <a><img class="img" src="./Sources/work gallery/nori-thumb.png"></a>
+                <div class="col-img-container">
+                <div class="col-img">
+                    
+                    <a><img class="img" src="./Sources/work gallery/nori-thumb2.png"></a>
+                    <a><img class="top-img" src="./Sources/work gallery/nori-thumb1.png"></a>
+                </div>             
                 <div class="caption-1">
                     <img src="./Sources/work gallery/nori-medium2.gif" class="img">
                 </div> 
                 <div class="caption-2">
                     <img src="./Sources/work gallery/nori-caption2.png" class="img" >
                 </div>
-                <a href="./1o1d.html">
-                    <img class="slide-1o1d" src="./Sources/work gallery/1o1d-slideshow-01.png" >
-                    <img class="slide-1o1d" src="./Sources/work gallery/1o1d-slideshow-02.png" >
-                    <img class="slide-1o1d" src="./Sources/work gallery/1o1d-slideshow-03.png" >
-                    <img class="slide-1o1d" src="./Sources/work gallery/1o1d-slideshow-04.png" >
-                    <img class="slide-1o1d" src="./Sources/work gallery/1o1d-slideshow-05.png" >
-                </a>
+                </div>
+                <div class="col-img-container">
+                <div class="col-img">
+                   
+                    <a href="./flickr.html"><img src="./Sources/work gallery/flickr-thumb2.png"></a>
+                    <a href="./flickr.html"><img  class="top-img" src="./Sources/work gallery/flickr-thumb1.png" ></a>
+                </div>
+                <div class="caption-1">
+                    <a href="./flickr.html"><img id="flickrC1"src="./Sources/work gallery/flicker-medium2.gif"></a>
+                </div>
+                <div class="caption-2">
+                     <a href="./flickr.html"><img id="flickrC2" src="./Sources/work gallery/flickr-caption2.png" ></a>
+                </div>
+                </div>
+                <div class="col-img-container">
+                <div class="col-img">
+                   
+                        <a href="./1o1d.html">
+                            <img class="slide-1o1d" src="./Sources/work gallery/1o1d-slideshow-01.png" >
+                            <img class="slide-1o1d" src="./Sources/work gallery/1o1d-slideshow-02.png" >
+                            <img class="slide-1o1d" src="./Sources/work gallery/1o1d-slideshow-03.png" >
+                            <img class="slide-1o1d" src="./Sources/work gallery/1o1d-slideshow-04.png" >
+                            <img class="slide-1o1d" src="./Sources/work gallery/1o1d-slideshow-05.png" >
+                        </a>   
+                </div>
                 <div class="caption-1">
                     <a href="./1o1d.html"><img src="./Sources/work gallery/1o1d-medium2.gif"></a>
-
                 </div>
                 <div class="caption-2" id="captionLessMargin2">
                     <a href="./1o1d.html"><img id="o1dC2" src="./Sources/work gallery/1o1d-caption2.png" ></a>
                 </div>
+                </div>
             </div>
-
-        </div> 
-
+        </div>        
     </div>
   </div>
 </div>
+<br>
+<br>
+<br>
 </body>
+
 <footer>
     <h7>© 2024 Juwon Jung</h7>
   </footer>
+
 </html>
