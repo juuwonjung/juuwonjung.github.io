@@ -27,7 +27,14 @@ body{
 
 .body-container{
   padding:0 4rem;
+  position: relative;
+  transition: opacity 0.4s ease-in-out, transform 1s ease-in-out;
 }
+
+.locked body{
+  overflow: hidden !important;
+}
+
 
 a {
     text-decoration: none;
@@ -138,6 +145,76 @@ footer{
   justify-content: center;
 }
 
+/* intro text */
+.intro-text{
+  padding: 13rem 0;
+  display: block;
+}
+
+.intro-paragraph{
+  text-align: left;
+  width:fit-content;
+  margin: auto;
+  font-family:juwonRegular;
+}
+
+.intro-wavy{
+  display: inline-block;
+  width: fit-content;
+}
+
+.letter{
+  font-family:juwonRegular;
+  letter-spacing: 0;
+  display: inline-block;
+  font-size: 2.8rem;
+  padding: 10px 0;
+  transition: transform 0.1s; /* Ensure animation runs smoothly */
+  animation: fade-up 0.5s 0.4s backwards;
+
+}
+  .letter:hover {
+    transform:translateY(10px); /* Add animation on hover */
+  }
+
+  .word{
+    display:inline-flex;
+    white-space: nowrap;
+  }
+
+.intro-text p{
+  font-family: juwonRegular;
+  letter-spacing: 0;
+  display: inline-block;
+  font-size: 2.8rem;
+  line-height: 2.5;
+  animation: fade-up 0.5s 0.4s backwards;
+}
+
+@keyframes fade-down{
+  0%{
+    opacity:0;
+    transform: translateY(-30px) scale(0.9);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade-up{
+  0%{
+    opacity:0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
 /* Loader Animation */
 
 /* me embroidery on hover close eyes - overlay image*/
@@ -150,50 +227,31 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: relative;
   margin: auto;
-  transition: transform 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out; /* Fade-out transition */
   z-index: 2000;
 }
 
 
 video.me-blink{
-  max-width: 330px;
+  max-width: 250px;
 }
 
 /*HOME PAGE*/
  
-/*Main landing page intro text*/
-.intro-text{
-  padding: 13rem 0;
-  display: block;
-}
-
-.intro-paragraph{
-  text-align: left;
-  width:fit-content;
-  margin: auto;
-}
-
-.intro-text p{
-  font-family: juwonRegular;
-  font-size: 3rem;
-  line-height: 2.5;
-}
-
-
 /* work gallery grid*/
 
 .work-grid {
   padding: 0;
 }
 
-.row, .genta-row, .half-grid{
+.row, .genta-row, .half-grid, .play-row{
   display: flex;
   flex-wrap: wrap;
 }
 
-.row {
+.row, .play-row {
   padding: 3.2rem 0;
   justify-content: space-between;
 }
@@ -205,11 +263,39 @@ video.me-blink{
   display: block;
 }
 
-.column img, video {
+.column img, .column video, .play-column img {
+  width: 100%;
+}
+
+.col-img {
   margin: 0 0 2rem 0;
   border-radius: 10px;
-  width: 100%;
   box-sizing: border-box;
+  border: 0.1px solid white;
+  display: flex;
+  position: relative;
+}
+
+.top-img{
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.top-img2{
+  position: absolute;
+  top:0;
+  left:15%;
+}
+
+.col-img img:hover{
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.play-container img:hover{
+  opacity: 0;
+  transition: all 200ms ease-in-out;
 }
 
 .slide-1o1d{
@@ -259,6 +345,50 @@ video.me-blink{
 #captionLessMargin1{
   margin: 2rem 0 0 0;
 }
+
+/* PLAYGROUND PAGE */
+/* playground*/
+
+
+.play-row{
+  padding: 0 0 13rem 0;
+}
+
+.play-row a{
+  display: block;
+}
+
+.play-column, .play-caption, .play-column2, .play-caption2{
+  flex: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.play-column2, .play-caption2{
+  margin: auto;
+}
+
+.play-caption p, .play-caption2 p{
+  font-family: juwonRegular;
+  font-size: 2rem;
+}
+
+.play-caption, .play-caption2 {
+  padding-top: 5rem;
+  opacity: 0;
+}
+
+.play-container{
+  text-align: center;
+  display: block;
+  position: relative;
+}
+
+.play-column2 img{
+  width: 70%;
+  margin: auto;
+}
+
 
 /*PROJECT PAGE*/
 
@@ -638,14 +768,14 @@ video.me-blink{
   .container {
     margin: 12.8rem 19rem 0 19rem;
 }
+  .intro-paragraph span, .intro-text p{
+  font-size: 2.3rem;
+}
 }
 
 @media only screen and (max-width: 1320px) {
   .caption-2{
     margin: 1.3rem 0 6rem 0;
-  }
-  .intro-text p{
-    font-size: 2.4rem;
   }
 }
 
@@ -655,6 +785,13 @@ video.me-blink{
   }
   .caption-2{
     height: 3.5rem;
+  }
+   .play-row{
+    padding: 0 0 10rem 0;
+  }
+  .play-caption, .play-caption2 {
+    padding-top: 2rem;
+    opacity: 0;
   }
 }
 
@@ -670,14 +807,29 @@ video.me-blink{
     padding: 10px;
     margin-bottom: 30px;
   }
-  .intro-text p{
+  .intro-paragraph span, .intro-text p{
     font-size: 2rem;
+  }
+  .intro-text{
+    padding: 9rem 0;
+  }
+  .play-caption p, .play-caption2 p{
+    font-size: 1.8rem;
+  }
+  .play-row{
+    padding: 0 0 8rem 0;
   }
 }
 
 @media only screen and (max-width: 1010px) {
   .container {
     margin: 12.8rem 12rem 0 12rem;
+}
+  .intro-paragraph span, .intro-text p{
+  font-size: 1.8rem;
+}
+.play-row{
+  padding: 0 0 5rem 0;
 }
 }
 
@@ -716,6 +868,26 @@ video.me-blink{
 
   .genta-row{
     flex-direction: column;
+  }
+  .play-row{
+    flex-direction: column;
+    padding: 0;  
+  }
+
+  .play-column, .play-column2{
+    flex: 100%;
+    max-width: 100%;
+    padding-bottom: 5rem;
+  }
+
+  .top-img2{
+    position: absolute;
+    top:0;
+    left:0;
+  }
+
+  .play-column2 img{
+    width: 100%;
   }
   }
 
