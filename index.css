@@ -37,7 +37,7 @@ body{
   overflow: hidden !important;
 }
 
-.locked html{
+html.locked {
   overflow: hidden !important;
 }
 
