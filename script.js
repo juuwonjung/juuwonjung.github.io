@@ -124,16 +124,17 @@ $(window).on("load", function() {
 });
 
 
-$(window).on("load", function() {
-    $(".col-img img, .col-img video").hover(
-        function() {
-            $(this).closest(".column").find(".caption-2").stop(true, true).fadeTo(100, 1);
-        },
-        function() {
-            $(this).closest(".column").find(".caption-2").stop(true, true).fadeTo(100, 0);
-        }
-    );
+$(document).ready(function(){
+  $(".col-img-container").hover(
+      function() {
+          $(this).find(".caption-2").css("opacity", "1");
+      }, 
+      function() {
+          $(this).find(".caption-2").css("opacity", "0");
+      }
+  );
 });
+
 
 /*genta slideshow manual */
 
