@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Juwon Jung</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./script.js" defer></script>
+</head>
+<body>
+<div class="body-container" id="agfom">
+<!-- Navbar (sit on top) -->
+<nav>
+  <div class="nav-bar" id="myNavBar">
+    <div class="nav-bar-links">
+        <a href ="./index.html" class="split">
+            <svg width="28" height="31" viewBox="0 0 31 35" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2891 2.66957C15.2892 2.6697 15.289 2.66945 15.2891 2.66957ZM15.4792 2.87447L28.1349 16.5116H25.3336C24.091 16.5116 23.0836 17.519 23.0836 18.7616V31.7497H8.91694V18.7616C8.91694 17.519 7.90958 16.5116 6.66694 16.5116H3.72755L15.4792 2.87447ZM13.7679 1.03072C14.6438 0.0143161 16.2089 -0.0144932 17.1216 0.96898L30.3572 15.2311C31.6934 16.6709 30.6723 19.0116 28.708 19.0116H25.5836V31.9997C25.5836 33.2423 24.5763 34.2497 23.3336 34.2497H8.66694C7.4243 34.2497 6.41694 33.2423 6.41694 31.9997V19.0116H3.18209C1.257 19.0116 0.22094 16.7511 1.47764 15.2928L13.7679 1.03072Z"/>
+                <path d="M14.4884 2.74543C15.286 1.82451 16.7146 1.82451 17.5121 2.74543L28.7228 15.6904C29.8445 16.9857 28.9244 18.9997 27.2109 18.9997H4.78961C3.07611 18.9997 2.15601 16.9857 3.27776 15.6904L14.4884 2.74543Z"/>
+            </svg>
+        </a>
+        <ul>
+        <li>
+        <a href="./playground.html">:D</a></li>
+       <li> <a href="./me.html">mE</a></li>
+        </ul>   
+    </div>
+  </div>
+</nav>
+</div>
+<div class="body-container" id="agfom-body">
+     <div class="flickr-container" id="agfom-container">
+  
+    <div class="flickr-grid" id="agfom-grid">
+        <div class="flickr-col1" id="agfom-col1">
 
+            <div class="heading">
+                <img src="./Sources/work gallery/agfom-medium2.gif" width="90%" style="min-width:300px" >
+            </div>
+            <div class="category">
+                <div class="round-rect">
+                <h5 id="agfom-rect">Prompt Engineering</h5>
+                </div>
+                <div class="round-rect">
+                <h5 id="agfom-rect">Research</h5>
+                </div>
+            <div class="round-rect">
+            <h5 id="agfom-rect">Editorial Design</h5>
+            </div>
+            </div>
+            <div class="description" >
+                <p>
+                    As part of <a href="https://www.flickr.org/"><b><span style="color:#FF2D93">Flickr Foundation’s </span></b></a> New Curators program, <a href="https://www.flickr.org/kickstarting-a-generated-family-of-man-experimenting-with-synthetic-photography/"><b>A Generated Family of Man </b></a> evaluates the current capabilities of generative AI by using 
+                    <a href="https://www.moma.org/calendar/exhibitions/2429"><b>The Family of Man</b></a> photographs as a benchmark. 
+                </p>
+                <br>
+                <p><i>
+                    Will A.I be able to generate the visual essence of humanity? Could we qualitatively measure the progress of Generative A.I?</i></p>
+            </div>
+        </div>
+        <div class="flickr-col2" id="agfom-col2">
+            <img src="./Sources/agfom/Pixel Image/cover/agfom-cover.gif" width="100%">
+        </div>
+    </div>
+</div>
+</div>
+<img src="./Sources/agfom/agfom-p.png" width="100%" style="border-radius:0;">
+<div class="body-container" id="agfom-body">
+    <div class="container2" id="agfom-container2"> 
+        <h4>Background</h4>
+    <div class="flicker-text">
+        <p>The Family of Man is a 1975 photography exhibition held in the MoMa, New York; it’s renowned for the collection of 503 photographs depicting humanity from 23 countries. 
+        </p>
+        <br>
+        <p>
+            As a simple experiment to test the current capabilities of generative A.I, we tried to replicate these photos using Microsoft’s Bing Image Creator.</p>
+        </div>        
+    <div class="flicker-image">
+        <video width="100%" src="./Sources/agfom/agfom-general-anim.mp4" loop=""autoplay="" playsinline muted=""></video>
+    </div> 
+    <h4>Image Generation Process</h4>
+    <div class="flicker-text">
+    <p>Our team created both human and AI captions for these original photographs to generate two types of images.</p>    
+</div>
+<div class="flicker-image">
+    <video width="100%" src="./Sources/agfom/ai-caption-res.mp4" loop=""autoplay="" playsinline muted=""></video>
+</div>
+<h4>Parameters of Image Generation</h4>
+    <div class="flicker-text">
+    <p>Since our goal was to manually regenerate 300+ photographs, we set certain parameters and limits to sustain this process. This included using constant descriptors, limiting iterations of captions, or adding specific contextual descriptors. 
+        More details can be found in <a href="https://www.flickr.org/making-a-generated-family-of-man-revelations-about-image-generators/"><b>this </b></a> blog post.</p>    
+</div>
+<h4>Reflections</h4>
+<div class="flicker-image">
+<img src="./Sources/agfom/AI-comparison.png" width="100%">
+</div>
+<div class="flicker-text">
+    <p>A Generated Family of Man is a physical timestamp of Gen A.I’s progress in the summer of 2023. </p>
+    <br>
+    <p>As this project evolves into an iterative series, it enables us to visualize the rapid progress of Gen A.I. If we were to repeat this process in 2025, will image generation be faster? Will Microsoft Bing still exist? Will the images feel more authentic?  </p>
+    <br>
+    <p>As this highlights the importance of qualitative, experimental research in generative A.I, we hope it sparks more critical discussions and evaluations. </p>
+    <br>
+    <br>
+    <span style="color:#969696"><p>This project was created at the Flickr Foundation (06.2023 - 09.2023) with Maya Osaka, under the creative direction of George Oates.</p></span>
+</div>   
+</div>
+</div>
+<div class="agfom-thumb" style="padding-top: 5rem;">
+    <img style="border-radius:0;" width="100%" src="./Sources/agfom/agfom-mockup.png">
+</div>
+</body>
+<footer>
+    <h7>© 2025 Juwon Jung</h7>
+  </footer>
+</html>
