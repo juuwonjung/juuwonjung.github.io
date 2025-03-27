@@ -1327,6 +1327,10 @@ video.me-blink, img.imgDefault, img.me-close-gif{
     width: 80%;
   }
 
+   .genta-prototype{
+    max-width: 100%;
+  }
+
 }
 
 @media only screen and (max-width: 510px) {
