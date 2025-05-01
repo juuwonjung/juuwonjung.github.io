@@ -242,19 +242,10 @@ footer{
 
 /* nori */
 
-.video1 {
-  width: 80%;
-  margin-top: 5rem;
-}
-
 .nori-nest-col{
   height: 33%;
   margin:0;
   padding: 0;
-}
-
-.nori-video{
-  padding-top: 5rem;
 }
 
 .nori-col img{
@@ -366,7 +357,7 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   display: block;
 }
 
-.column img, .column video, .play-column img, .nori-video {
+.column img, .column video, .play-column img {
   width: 100%;
 }
 
@@ -465,7 +456,7 @@ video.me-blink, img.imgDefault, img.me-close-gif{
   justify-content: center;
 }
 
-.play-column2, .play-caption2, .play-column2 img, .flickr-col1, .flickr-col2, .me-icons, .me-text, .loader, .p-container, .video1, .intro-paragraph, .slide-selector{
+.play-column2, .play-caption2, .play-column2 img, .flickr-col1, .flickr-col2, .me-icons, .me-text, .loader, .p-container, .intro-paragraph, .slide-selector{
   margin: auto;
 }
 
@@ -1183,14 +1174,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
     padding-top: 0;
   }
 
-  .nori-video{
-    padding: 15rem 3rem 0 3rem
-  }
-
-  .video1{
-    width: 100%;
-  }
-
   .picky-grid{
     gap: 3px;
   }
@@ -1424,10 +1407,6 @@ video.me-blink, img.imgDefault, img.me-close-gif{
 
   .nav-bar {
     width: calc(100% - 5rem);
-}
-
-.nori-video{
-  padding: 15rem 2.5rem 0 2.5rem
 }
 
 .nori-body .heading img{
